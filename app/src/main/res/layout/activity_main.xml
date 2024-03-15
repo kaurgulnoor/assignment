@@ -6,7 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    tools:ignore="UseSwitchCompatOrMaterialXml">
+    tools:ignore="UseSwitchCompatOrMaterialXml"
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp">
 
     <Button
         android:id="@+id/button2"
@@ -20,7 +24,9 @@
         app:layout_constraintHorizontal_bias="0.143"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintVertical_bias="0.066"
+        android:nextFocusRight="@+id/button5"
+        android:nextFocusDown="@+id/switch2" />
 
     <Button
         android:id="@+id/button5"
@@ -30,7 +36,11 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toTopOf="@+id/button2"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:nextFocusRight="@+id/button2"
+        android:nextFocusLeft="@+id/button5"
+        android:nextFocusDown="@+id/switch2"
+        />
 
     <Button
         android:id="@+id/button6"
@@ -41,7 +51,10 @@
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toTopOf="@+id/button5"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:nextFocusRight="@+id/button2"
+        android:nextFocusLeft="@+id/button6"
+        android:nextFocusDown="@+id/switch2"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -52,7 +65,10 @@
         app:layout_constraintStart_toStartOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/button5"
         app:srcCompat="@drawable/flag"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:nextFocusRight="@+id/button2"
+        android:nextFocusLeft="@+id/button6"
+        android:nextFocusDown="@+id/switch2"/>
 
     <Switch
         android:id="@+id/switch2"
@@ -62,6 +78,9 @@
         android:text="Switch"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:nextFocusUp="@+id/button2"
+        android:nextFocusLeft="@+id/button5"
+        android:nextFocusRight="@+id/button6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
