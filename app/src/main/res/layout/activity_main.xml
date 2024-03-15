@@ -13,49 +13,64 @@
         android:layout_width="303dp"
         android:layout_height="39dp"
         android:text="TextView"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="186dp"
+        tools:layout_editor_absoluteY="167dp" />
 
     <EditText
         android:id="@+id/myedittext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/editmessage"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="90dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="183dp"
         android:layout_height="51dp"
         android:text="Button"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="282dp"
+        tools:layout_editor_absoluteY="624dp" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="154dp"
         android:layout_height="27dp"
         android:text="Do you take coffee"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="255dp" />
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Do you take coffee"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="347dp"
+        tools:layout_editor_absoluteY="255dp" />
 
     <RadioButton
         android:id="@+id/radioButton"
         android:layout_width="176dp"
         android:layout_height="29dp"
         android:text="@string/do_you_take_coffee"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="318dp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/canada"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="245dp"
+        tools:layout_editor_absoluteY="389dp" />
+
     <ImageButton
         android:id="@+id/imagebtn"
         android:layout_width="wrap_content"
