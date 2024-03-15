@@ -2,8 +2,14 @@ package com.example.assignment;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,10 +26,8 @@ import com.example.assignment.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding variableBinding;
-    TextView myText = variableBinding.textView;
-    Button btn = variableBinding.button;
-    EditText myedit = variableBinding.myedittext;
-
+    ImageView imageView;
+    Switch sw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,32 +38,20 @@ public class MainActivity extends AppCompatActivity {
 
         MutableLiveData<Boolean> isSelected = new MutableLiveData<>();
 
-        isSelected.observe(this, selected -> {
-            variableBinding.checkBox.setChecked(selected);
-            variableBinding.radioButton.setChecked(selected);
-            variableBinding.switch1.setChecked(selected);
 
-            Toast.makeText(MainActivity.this, "The value is now: "+selected, Toast.LENGTH_SHORT).show();
-        });
+        imageView = findViewById(R.id.imageView2);
+        sw = findViewById(R.id.switch2);
 
-        variableBinding.checkBox.setOnCheckedChangeListener((buttonView, isChecked) ->
-                isSelected.postValue(isChecked));
-
-        variableBinding.radioButton.setOnCheckedChangeListener((buttonView, isChecked) ->
-                isSelected.postValue(isChecked));
-
-        variableBinding.switch1.setOnCheckedChangeListener((buttonView, isChecked) ->
-                isSelected.postValue(isChecked));
-
-        variableBinding.imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                display(v);
+        sw.setOnCheckedChangeListener( (btn, isChecked) -> {
+            if (isChecked)
+            {
+                RotateAnimation rotate = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f,
+                        Animation.RELATIVE_TO_SELF, 0.5f);
+                rotate.setDuration(5000);
+                rotate.setRepeatCount(Animation.INFINITE);
+                rotate.setInterpolator(new LinearInterpolator());
+                imageView.startAnimation(rotate);
             }
         });
-
-    }
-    public void display(View v) {
-        Toast.makeText(MainActivity.this, "ImageView Clicked", Toast.LENGTH_SHORT).show();
     }
 }
