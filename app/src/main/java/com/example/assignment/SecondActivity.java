@@ -66,8 +66,11 @@ public class SecondActivity extends AppCompatActivity {
         // Implement change picture functionality
         changePictureButton.setOnClickListener(v -> {
             // Open camera activity to take a new picture
+            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(cameraIntent, YOUR_REQUEST_CODE);
         });
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -76,6 +79,7 @@ public class SecondActivity extends AppCompatActivity {
                 Bitmap bitmap = (Bitmap) data.getExtras().get("data");
                 if (bitmap != null) {
                     saveBitmapToInternalStorage(bitmap);
+                    profileImageView.setImageBitmap(bitmap);
                 }
             }
         }
@@ -101,20 +105,4 @@ public class SecondActivity extends AppCompatActivity {
             }
         }
     }
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        ImageView imageView = null;
-        // Check if the file exists
-        File file = new File(getFilesDir(), "Picture.png");
-        if (file.exists()) {
-            // Load the bitmap from the file
-            Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
-            // Set the bitmap to the ImageView
-            imageView.setImageBitmap(bitmap);
-        }
-    }
-
 }
