@@ -8,72 +8,49 @@
     tools:context=".MainActivity"
     tools:ignore="UseSwitchCompatOrMaterialXml">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="303dp"
-        android:layout_height="39dp"
-        android:text="TextView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="186dp"
-        tools:layout_editor_absoluteY="167dp" />
-
     <EditText
-        android:id="@+id/myedittext"
+        android:id="@+id/editTextText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/editmessage"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="90dp" />
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter your password"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="238dp" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="664dp"
+        android:layout_height="90dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <EditText
+        android:id="@+id/editTextNumberPassword"
+        android:layout_width="666dp"
+        android:layout_height="87dp"
+        android:ems="10"
+        android:inputType="numberPassword"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="283dp" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter your email address here"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="91dp" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="183dp"
-        android:layout_height="51dp"
-        android:text="Button"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="282dp"
-        tools:layout_editor_absoluteY="624dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="154dp"
-        android:layout_height="27dp"
-        android:text="Do you take coffee"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="255dp" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do you take coffee"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="347dp"
-        tools:layout_editor_absoluteY="255dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="176dp"
-        android:layout_height="29dp"
-        android:text="@string/do_you_take_coffee"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="318dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/canada"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="245dp"
-        tools:layout_editor_absoluteY="389dp" />
-
-    <ImageButton
-        android:id="@+id/imagebtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints" />
+        android:layout_width="674dp"
+        android:layout_height="80dp"
+        android:text="Login"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="516dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

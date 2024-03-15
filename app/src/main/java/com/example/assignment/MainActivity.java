@@ -20,10 +20,32 @@ import com.example.assignment.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding variableBinding;
-    TextView myText = variableBinding.textView;
     Button btn = variableBinding.button;
-    EditText myedit = variableBinding.myedittext;
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,32 +56,5 @@ public class MainActivity extends AppCompatActivity {
 
         MutableLiveData<Boolean> isSelected = new MutableLiveData<>();
 
-        isSelected.observe(this, selected -> {
-            variableBinding.checkBox.setChecked(selected);
-            variableBinding.radioButton.setChecked(selected);
-            variableBinding.switch1.setChecked(selected);
-
-            Toast.makeText(MainActivity.this, "The value is now: "+selected, Toast.LENGTH_SHORT).show();
-        });
-
-        variableBinding.checkBox.setOnCheckedChangeListener((buttonView, isChecked) ->
-                isSelected.postValue(isChecked));
-
-        variableBinding.radioButton.setOnCheckedChangeListener((buttonView, isChecked) ->
-                isSelected.postValue(isChecked));
-
-        variableBinding.switch1.setOnCheckedChangeListener((buttonView, isChecked) ->
-                isSelected.postValue(isChecked));
-
-        variableBinding.imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                display(v);
-            }
-        });
-
-    }
-    public void display(View v) {
-        Toast.makeText(MainActivity.this, "ImageView Clicked", Toast.LENGTH_SHORT).show();
     }
 }
