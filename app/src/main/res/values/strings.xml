@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">assignment</string>
+    <string name="editmessage">I\\\'m an EditText</string>
+    <string name="do_you_take_coffee">Do you take coffee</string>
+</resources>
