@@ -9,71 +9,35 @@
     tools:ignore="UseSwitchCompatOrMaterialXml">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="303dp"
-        android:layout_height="39dp"
-        android:text="TextView"
+        android:id="@+id/viewText"
+        android:layout_width="273dp"
+        android:layout_height="22dp"
+        android:text="View Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="186dp"
-        tools:layout_editor_absoluteY="167dp" />
-
-    <EditText
-        android:id="@+id/myedittext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/editmessage"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="90dp" />
+        tools:layout_editor_absoluteY="198dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="183dp"
         android:layout_height="51dp"
         android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="282dp"
-        tools:layout_editor_absoluteY="624dp" />
+        tools:layout_editor_absoluteY="424dp" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="154dp"
-        android:layout_height="27dp"
-        android:text="Do you take coffee"
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="305dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="255dp" />
+        tools:layout_editor_absoluteY="234dp" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do you take coffee"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="347dp"
-        tools:layout_editor_absoluteY="255dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="176dp"
-        android:layout_height="29dp"
-        android:text="@string/do_you_take_coffee"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="318dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/canada"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="245dp"
-        tools:layout_editor_absoluteY="389dp" />
-
-    <ImageButton
-        android:id="@+id/imagebtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
