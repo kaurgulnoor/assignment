@@ -35,6 +35,19 @@ android {
     }
 }
 
+tasks.register<Javadoc>("javadoc") {
+    description = "Generates Javadoc for the project."
+    sourceSets {
+        getByName("$rootDir") {
+            java.srcDir("$rootDir/javadoc")
+        }
+    }
+    classpath += files(android.sdkDirectory.resolve("platforms/${android.compileSdkVersion}/android.jar"))
+    destinationDir = file("$buildDir/docs/javadoc")
+}
+
+
+
 dependencies {
 
     implementation(libs.appcompat)
